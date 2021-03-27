@@ -1,0 +1,253 @@
+/* Arjon del Rosario CSC365*/
+
+a{
+    font-weight: bold;
+}
+
+header{
+    border-bottom: 2px solid steelblue;
+    background-image: linear-gradient(to bottom, white, lightsteelblue);*/
+    /*background-image: url('images/downtown_pic.jpeg');*/
+
+    padding: .9375em 1.875em .9375em;
+}
+
+
+header h2{
+    color: wheat;
+    font-style: italic;
+    font-size: 250%;
+    text-shadow: .1875em .1875em .1875em black;
+    text-indent: 2.8125em;
+    margin-bottom: .3em;
+}
+
+header h3{
+    font-size: 150%;
+    text-indent: 2.8125em;
+    padding-bottom: .75em;
+}
+
+header img{
+    float: left;
+    width: 9.375em;
+    max-width: 140px;
+    min-width: 70px;
+}
+
+body{
+    font-family: sans-serif;
+    margin: auto;
+    width: 95%;
+    max-width: 900px;
+    padding: 0;
+    border: solid .0625em steelblue;
+    box-shadow: 0 .625em .625em black;
+    
+}
+
+#nav_menu{
+    border-bottom: .125em;
+    border-bottom-color: steelblue;
+}
+#nav_menu ul{ 
+    list-style-type: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+#nav_menu ul li{
+    float: left;
+    width: 11.25em;
+}
+#nav_menu ul ul{
+    display: none;
+    position: absolute;
+}
+#nav_menu ul ul li{
+    width: 11.25em;
+    float: none;
+}
+#nav_menu ul li:hover > ul {
+display: block;
+}
+#nav_menu > ul::after {
+content: "";
+display: block;
+clear: both;
+}
+#nav_menu ul li a:hover,
+#nav_menu ul li a:focus{
+    color: maroon;
+    background: lightsteelblue;
+}
+#nav_menu ul li a{
+    
+    display: block;
+    text-align: center;
+    padding: .7em 0 .7em;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: steelblue;
+}
+#nav_menu ul li.current > a{
+    color: black;
+}
+
+section{
+    padding: 1.5625em 1.875em 1.5625em;
+    width: 35.3125em;
+    float: right;
+    
+}
+
+main section h1{
+    font-size: 160%;
+    margin-bottom: .3em;
+}
+
+main section h2{
+    font-size: 130%;
+    margin-bottom: .5em;
+}
+
+main section h3 a{
+    font-size: 110%;
+    margin-bottom: .4em;
+    color: maroon;
+}
+main section h3{
+    font-size: 110%;
+    margin-bottom: .4em;
+    color: maroon;
+}
+main section h3 a:hover,
+main section h3 a:focus{
+    color: steelblue;
+}
+main section p{
+    margin-bottom: .7em;
+    width: 26.875em;
+    clear: left             /*clear: left; was not doing its job
+                            so I just put a width above it */
+}
+main section img.rightImage{
+    float: right;
+    border: .0625em solid black;
+    margin-left: 1em;
+    
+}
+main section img {
+    float: left;
+    margin: 0 .3em .3em 0;  
+}
+
+aside{
+    float: left;
+    width: 27.222%; 
+    padding: 1.5625em 0 0 1.875em;
+}
+main aside h2{
+    font-size: 130%;
+    margin-bottom: .5em;
+    color: maroon;
+}
+
+main aside ul{
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 1em;
+}
+main aside ul li a{
+    font-weight: bold;
+    color: steelblue;
+    text-decoration: none;
+}
+main aside ul li a:hover,
+main aside ul li a:focus{
+    color: maroon;
+}
+
+footer{
+    clear: both;
+    text-align: center;
+    color: white;
+    font-size: 85%;
+    background-color: steelblue;
+    padding: .9375em 3.333% .9375em;
+}
+footer p.credits a{
+    color: black;
+}
+
+footer p.credits a:focus,
+footer p.credits a:hover{
+    color: white;
+}
+
+/* The Next Section if for the Calories tabel */
+
+main section table caption{
+    font-size: 160%;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: .5em
+}
+main section table{
+    margin-bottom: 125%;
+}
+
+main section table thead th.left{
+    font-weight: bold;
+    color: maroon;
+    padding-bottom: .5em;
+    vertical-align: top;
+    text-align: left;
+    
+    
+}
+
+main section table th,
+main section table td{
+    padding: .2em 20% 20% 0;
+}
+
+
+main section table tbody td.right{
+    text-align: right;
+    padding: .2em 20% 20% 0;
+        
+}
+
+/* mobile for portrait */
+@media only screen and (max-width: 900px) {
+    body{
+        box-shadow: none;
+        font-size: 90%;
+        
+    } 
+   
+}
+
+/* mobile for landscape */
+@media only screen and (max-width: 767px) {
+    main asside ul li{
+        list-style-type:square;
+    }
+    main asside ul li a:hover,
+    main asside ul li a:focus{
+        font-size: 105%;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    header h2{ font-size: 120%;}
+    header h3{ font-size: 115%;}
+    p{ font-size: 95%;}
+    asside {float:none}
+    section{float:none;}
+    
+    
+}

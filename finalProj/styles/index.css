@@ -1,0 +1,282 @@
+/* Arjon del Rosario CSC365*/
+
+a{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+body{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 3fr 8fr;
+    grid-column-gap: 3%;
+    font-family: sans-serif;
+    margin: auto;
+    width: 95%;
+    max-width: 1024px;
+    padding: 0;
+    border: solid .0625em steelblue;
+    box-shadow: 0 .625em 1.25em .625em black;
+}
+
+header{
+    grid-row: 1;
+    grid-column: 1 / span 2;
+    border-bottom: 2px solid #CD853F;
+    padding: .9375em 1.875em .9375em;
+    background: url('../images/downtown_pic.jpg') center no-repeat;
+    background-size: cover;
+}
+
+
+header h2{
+    color: #87CEEB;
+    font-style: italic;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 250%;
+    text-shadow: .1em .1em .1em SteelBlue;
+    text-indent: 1.5em;
+    margin-bottom: 0em;
+    margin-top: 1.5em;
+    opacity: 0;
+}
+header #wilm{
+    margin-top: 0em;
+    margin-bottom: 1em;
+}
+
+#nav_menu{
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    border-bottom: .125em;
+    justify-content: space-between;
+    background-color: #CD853F;
+}
+#nav_menu ul{ 
+    list-style-type: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(5, 1fr);
+}
+#nav_menu ul li{
+    /*flex-basis: 20%;*/
+}
+
+
+
+#nav_menu ul li a:hover,
+#nav_menu ul li a:focus{
+    color: maroon;
+    background: #DAA520;
+}
+#nav_menu ul li a{
+    display: block;
+    text-align: center;
+    padding: .7em 0 .7em;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #CD853F;
+    white-space: nowrap;
+}
+#nav_menu ul li.current > a{
+    color: black;
+}
+
+
+section{
+    grid-row: 3;
+    grid-column: 2;
+    padding: 1.5625em 1.875em 1.5625em;
+}
+
+section h1{
+    font-size: 160%;
+    margin-bottom: 0em;
+}
+
+section h3{
+    font-size: 110%;
+    margin-bottom: 0em;
+    padding-left: 2em
+}
+
+section #down_h3{background: url('../images/down.jpg') left no-repeat;}
+
+section #beach_h3{background: url('../images/beach.jpg') left no-repeat;}
+
+section #parks_h3{background: url('../images/parks.jpg') left no-repeat;}
+
+section h3 a{
+    font-size: 150%;
+    margin-bottom: .4em;
+    color: white;
+}
+
+    
+section h3 a:hover,
+section h3 a:focus{
+    color: steelblue;
+}
+section p{
+    margin-bottom: .5em;
+    margin-left: .75em;
+    font-size: 1.1em;
+    width: 100%;
+    clear: left;
+    grid-column: 1 / span 2;
+}
+section img.rightImage{
+    float: right;
+    border: .0625em solid black;
+    margin-left: 1em;
+    
+}
+section img {
+    float: left;
+    margin: 0 .3em .3em 0;  
+}
+
+aside{
+    grid-row: 3;
+    grid-column: 1;
+    padding: 1.5625em 0 0 1.875em;
+}
+aside h2{
+    font-size: 130%;
+    margin-bottom: .5em;
+    color: maroon;
+}
+
+aside ul{
+    line-height: 1.5;
+    margin: 0;
+    padding-left: 1em;
+}
+aside ul li a{
+    font-weight: bold;
+    color: steelblue;
+    text-decoration: none;
+}
+aside ul li a:hover,
+aside ul li a:focus{
+    color: maroon;
+}
+
+footer{
+    grid-row: 4;
+    grid-column: 1 / span 2;
+    clear: both;
+    text-align: center;
+    color: white;
+    font-size: 85%;
+    background-color: #CD853F;
+    padding: 1.2em 3.333% 1.2em;
+}
+footer p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* The Next Section if for the Calories table */
+table caption{
+    padding-top: 1em;
+}
+
+section table{
+    background-color:blanchedalmond
+}
+
+section table caption{
+    font-size: 130%;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: .5em
+}
+
+section table th{
+    color: dimgray;
+}
+
+section table th,
+section table td{
+    padding: .2em .2em 5%;
+}
+
+
+section table tbody td{
+    text-align: center;
+    /*padding: .2em 20% 20% 0;*/
+        
+}
+
+/* mobile for portrait */
+@media only screen and (max-width: 900px) {
+    body{
+        box-shadow: none;
+        font-size: 90%;
+        
+    } 
+   
+}
+
+/* mobile for landscape */
+@media only screen and (max-width: 767px) {
+    
+    body{
+        
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+    header{grid-row: 1}
+    #nav_menu{grid-row: 2}
+    section{grid-row: 3;
+            grid-column: 1;
+            padding-bottom: 0;}
+    aside{grid-row:4;
+            grid-column: 1;
+            margin-left: 5%}
+    footer{grid-row: 5}
+    
+    
+    #nav_menu ul{
+        margin: 0 1% 0;
+        justify-content: space-around;
+    }
+    main asside ul li{
+        list-style-type:square;
+    }
+    main asside ul li a:hover,
+    main asside ul li a:focus{
+        font-size: 105%;
+    }
+    
+}
+
+@media only screen and (max-width: 479px) {
+    
+    header h2{ font-size: 120%;}
+    header h3{ font-size: 115%;}
+    p{ font-size: 95%;}
+    asside {float:none;}
+    section{float:none;}
+    
+    
+}
+
+@media print {
+    header, footer, aside, form, nav{
+        display: none;
+    }
+    body{
+        border: none;
+        box-shadow: none;
+    }
+    section{
+        grid-column: 1 / span 2;
+    }
+}

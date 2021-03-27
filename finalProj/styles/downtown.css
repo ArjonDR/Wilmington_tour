@@ -1,0 +1,63 @@
+
+section{
+    display: grid;
+    grid-template-rows: auto;
+}
+
+section div img{
+    width: 50%;
+    margin-top: .5em;
+}
+
+section h2{
+    font-size: 130%;
+    margin-bottom: .5em;
+    margin-top: 0em;
+}
+section p{
+    margin-bottom: 1.2em;
+    margin-left: 0em;
+}
+
+section #div1{
+    grid-row: 1;
+}
+
+section #div1 h2{
+    float: left;
+}
+
+section #div1 img{
+    float: right; 
+}
+
+section #div2{
+    grid-row: 2;
+}
+
+section #div2 h2{
+    float: right;
+    margin-right: .8em;
+}
+
+section #div2 img{
+    float: left; 
+}
+section #div2 p{
+    clear: right; 
+}
+
+section #div3{
+    grid-row: 3;
+}
+
+section #div3 h2{
+    float: left;
+}
+
+section #div3 img{
+    float: right; 
+}
+
+
+

@@ -1,0 +1,32 @@
+
+
+
+section h2{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+section p{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+section form{
+    margin-top: 1.5em;
+}
+
+fieldset {
+    margin-bottom: 1em;
+}
+
+#contact_field label {
+    float: left;
+    width: 5.5em;
+    text-align: right;
+}
+#contact_field input{
+    width: 15em;
+    margin-left: .5em;
+    margin-bottom: .5em;
+}
